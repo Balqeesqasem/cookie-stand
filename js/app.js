@@ -5,21 +5,25 @@ var seattleShope = {
     maximumCustomers : 65,
     averageCookies : 6.3,
     numCus: 0,
-    numCooke:0,
+    numCooke:[],
     totalNumCooki : 0,
     houer : ['6 AM' , '7 AM', '8 AM', '9 AM', '10 AM' , '11 AM' , '12 PM', '1 PM', '2 PM', '3 PM', '4 PM' , '5 PM' , '6 PM', '7 PM'],
     getNumCus : function( minimumCustomers , maximumCustomers){
-        for(var i=0 ; i<seattleShope.houer.length ;i++){
-            seattleShope.numCus = getRandomNumCust(minimumCustomers , maximumCustomers);
+        for(var i=0 ; i<this.houer.length ;i++){
+            this.numCus = getRandomNumCust(minimumCustomers , maximumCustomers);
            // console.log(NumCus);
-           seattleShope.numCooke = seattleShope.numCus * seattleShope.averageCookies;
-           seattleShope.totalNumCooki = this.totalNumCooki + this.numCooke;
-           this.numCooke=Math.ceil(this.numCooke);
+          
+            this.numCooke = this.numCus * this.averageCookies;
+            this.numCooke=Math.ceil(this.numCooke);
+           
+           
+           this.totalNumCooki = this.totalNumCooki + this.numCooke;
+           
            this.totalNumCooki=Math.ceil(this.totalNumCooki);
-           console.table(`${seattleShope.houer[i]} we have ${seattleShope.numCus} customers we should have ${seattleShope.numCooke} in this houer `);
+           console.table(`${this.houer[i]} we have ${this.numCus} customers we should have ${this.numCooke} in this houer `);
           
         }
-        console.log(`total  ${seattleShope.totalNumCooki}`);
+        console.log(`total  ${this.totalNumCooki}`);
     },
 
     render : function(){
@@ -27,7 +31,7 @@ var seattleShope = {
         var container = document.getElementById('show')
         var hed1 = document.createElement('h1');
         container.appendChild(hed1);
-        hed1.textContent = seattleShope.shopeName;
+        hed1.textContent = this.shopeName;
         console.log(hed1);
         var ul1 = document.createElement('ul');
         hed1.appendChild(ul1);
@@ -35,29 +39,252 @@ var seattleShope = {
         ul1.appendChild(li1);
         var li2 = document.createElement('li');
         ul1.appendChild(li2);
-        for(var i=0 ; i<seattleShope.houer.length ;i++){
+        for(var i=0 ; i<this.houer.length ;i++){
             var li1 = document.createElement('li');
             ul1.appendChild(li1);
-            li1.textContent = seattleShope.houer[i] +' : '+ seattleShope.numCooke;
+            li1.textContent = this.houer[i] +' : '+ this.numCooke + ' cookies';
            
         }
        
 
-        //console.log(ul1);
-        //console.log(li1);
-}
-    //     var articleEl = document.createElement('article');
-    //     console.log(articleEl);
-    //     container.appendChild(header);
-    //     console.log(header);
-    //     header.textContent = Seattle.name;
-
-    // }
+    
      
-};
-//console.log(Seattle.render());
+} } ;
+
+
  console.log(seattleShope.getNumCus(32 ,65));
  console.log(seattleShope.render());
+
+
+
+
+ var tokyoShope = {
+    shopeName : 'Tokyo',
+    minimumCustomers : 3,
+    maximumCustomers : 24,
+    averageCookies : 1.2,
+    numCus: 0,
+    numCooke:[],
+    totalNumCooki : 0,
+    houer : ['6 AM' , '7 AM', '8 AM', '9 AM', '10 AM' , '11 AM' , '12 PM', '1 PM', '2 PM', '3 PM', '4 PM' , '5 PM' , '6 PM', '7 PM'],
+    getNumCus : function( minimumCustomers , maximumCustomers){
+        for(var i=0 ; i<this.houer.length ;i++){
+            this.numCus = getRandomNumCust(minimumCustomers , maximumCustomers);
+           // console.log(NumCus);
+          
+            this.numCooke = this.numCus * this.averageCookies;
+            this.numCooke=Math.ceil(this.numCooke);
+           
+           
+           this.totalNumCooki = this.totalNumCooki + this.numCooke;
+           
+           this.totalNumCooki=Math.ceil(this.totalNumCooki);
+           console.table(`${this.houer[i]} we have ${this.numCus} customers we should have ${this.numCooke} in this houer `);
+          
+        }
+        console.log(`total  ${this.totalNumCooki}`);
+    },
+
+    render : function(){
+        
+        var container = document.getElementById('show')
+        var hed1 = document.createElement('h1');
+        container.appendChild(hed1);
+        hed1.textContent = this.shopeName;
+        console.log(hed1);
+        var ul1 = document.createElement('ul');
+        hed1.appendChild(ul1);
+        var li1 = document.createElement('li');
+        ul1.appendChild(li1);
+        var li2 = document.createElement('li');
+        ul1.appendChild(li2);
+        for(var i=0 ; i<this.houer.length ;i++){
+            var li1 = document.createElement('li');
+            ul1.appendChild(li1);
+            li1.textContent = this.houer[i] +' : '+ this.numCooke + ' cookies';
+           
+        }
+       
+
+    
+     
+} } ;
+        
+ console.log(tokyoShope.getNumCus(3 ,24));
+ console.log(tokyoShope.render());
+
+
+
+ var dubaiShope = {
+    shopeName : 'Dubai',
+    minimumCustomers : 11,
+    maximumCustomers : 38,
+    averageCookies : 3.7,
+    numCus: 0,
+    numCooke:[],
+    totalNumCooki : 0,
+    houer : ['6 AM' , '7 AM', '8 AM', '9 AM', '10 AM' , '11 AM' , '12 PM', '1 PM', '2 PM', '3 PM', '4 PM' , '5 PM' , '6 PM', '7 PM'],
+    getNumCus : function( minimumCustomers , maximumCustomers){
+        for(var i=0 ; i<this.houer.length ;i++){
+            this.numCus = getRandomNumCust(minimumCustomers , maximumCustomers);
+           // console.log(NumCus);
+          
+            this.numCooke = this.numCus * this.averageCookies;
+            this.numCooke=Math.ceil(this.numCooke);
+           
+           
+           this.totalNumCooki = this.totalNumCooki + this.numCooke;
+           
+           this.totalNumCooki=Math.ceil(this.totalNumCooki);
+           console.table(`${this.houer[i]} we have ${this.numCus} customers we should have ${this.numCooke} in this houer `);
+          
+        }
+        console.log(`total  ${this.totalNumCooki}`);
+    },
+
+    render : function(){
+        
+        var container = document.getElementById('show')
+        var hed1 = document.createElement('h1');
+        container.appendChild(hed1);
+        hed1.textContent = this.shopeName;
+        console.log(hed1);
+        var ul1 = document.createElement('ul');
+        hed1.appendChild(ul1);
+        var li1 = document.createElement('li');
+        ul1.appendChild(li1);
+        var li2 = document.createElement('li');
+        ul1.appendChild(li2);
+        for(var i=0 ; i<this.houer.length ;i++){
+            var li1 = document.createElement('li');
+            ul1.appendChild(li1);
+            li1.textContent = this.houer[i] +' : '+ this.numCooke + ' cookies';
+           
+        }
+       
+
+    
+     
+} } ;
+        
+ console.log(dubaiShope.getNumCus(11 ,38));
+ console.log(dubaiShope.render());
+
+ var parisShope = {
+    shopeName : 'Paris',
+    minimumCustomers : 20,
+    maximumCustomers : 38,
+    averageCookies : 2.3,
+    numCus: 0,
+    numCooke:[],
+    totalNumCooki : 0,
+    houer : ['6 AM' , '7 AM', '8 AM', '9 AM', '10 AM' , '11 AM' , '12 PM', '1 PM', '2 PM', '3 PM', '4 PM' , '5 PM' , '6 PM', '7 PM'],
+    getNumCus : function( minimumCustomers , maximumCustomers){
+        for(var i=0 ; i<this.houer.length ;i++){
+            this.numCus = getRandomNumCust(minimumCustomers , maximumCustomers);
+           // console.log(NumCus);
+          
+            this.numCooke = this.numCus * this.averageCookies;
+            this.numCooke=Math.ceil(this.numCooke);
+           
+           
+           this.totalNumCooki = this.totalNumCooki + this.numCooke;
+           
+           this.totalNumCooki=Math.ceil(this.totalNumCooki);
+           console.table(`${this.houer[i]} we have ${this.numCus} customers we should have ${this.numCooke} in this houer `);
+          
+        }
+        console.log(`total  ${this.totalNumCooki}`);
+    },
+
+    render : function(){
+        
+        var container = document.getElementById('show')
+        var hed1 = document.createElement('h1');
+        container.appendChild(hed1);
+        hed1.textContent = this.shopeName;
+        console.log(hed1);
+        var ul1 = document.createElement('ul');
+        hed1.appendChild(ul1);
+        var li1 = document.createElement('li');
+        ul1.appendChild(li1);
+        var li2 = document.createElement('li');
+        ul1.appendChild(li2);
+        for(var i=0 ; i<this.houer.length ;i++){
+            var li1 = document.createElement('li');
+            ul1.appendChild(li1);
+            li1.textContent = this.houer[i] +' : '+ this.numCooke + ' cookies';
+           
+        }
+       
+
+    
+     
+} } ;
+        
+ console.log(parisShope.getNumCus(20 ,38));
+ console.log(parisShope.render());
+
+
+ 
+
+
+ var limaShope = {
+    shopeName : 'Lima',
+    minimumCustomers : 2,
+    maximumCustomers : 16,
+    averageCookies : 4.6,
+    numCus: 0,
+    numCooke:[],
+    totalNumCooki : 0,
+    houer : ['6 AM' , '7 AM', '8 AM', '9 AM', '10 AM' , '11 AM' , '12 PM', '1 PM', '2 PM', '3 PM', '4 PM' , '5 PM' , '6 PM', '7 PM'],
+    getNumCus : function( minimumCustomers , maximumCustomers){
+        for(var i=0 ; i<this.houer.length ;i++){
+            this.numCus = getRandomNumCust(minimumCustomers , maximumCustomers);
+           // console.log(NumCus);
+          
+            this.numCooke = this.numCus * this.averageCookies;
+            this.numCooke=Math.ceil(this.numCooke);
+           
+           
+           this.totalNumCooki = this.totalNumCooki + this.numCooke;
+           
+           this.totalNumCooki=Math.ceil(this.totalNumCooki);
+           console.table(`${this.houer[i]} we have ${this.numCus} customers we should have ${this.numCooke} in this houer `);
+          
+        }
+        console.log(`total  ${this.totalNumCooki}`);
+    },
+
+    render : function(){
+        
+        var container = document.getElementById('show')
+        var hed1 = document.createElement('h1');
+        container.appendChild(hed1);
+        hed1.textContent = this.shopeName;
+        console.log(hed1);
+        var ul1 = document.createElement('ul');
+        hed1.appendChild(ul1);
+        var li1 = document.createElement('li');
+        ul1.appendChild(li1);
+        var li2 = document.createElement('li');
+        ul1.appendChild(li2);
+        for(var i=0 ; i<this.houer.length ;i++){
+            var li1 = document.createElement('li');
+            ul1.appendChild(li1);
+            li1.textContent = this.houer[i] +' : '+ this.numCooke + ' cookies';
+           
+        }
+       
+
+    
+     
+} } ;
+        
+ console.log(limaShope.getNumCus(2 ,16));
+ console.log(limaShope.render());
+
+
 
 
 function getRandomNumCust(min, max) {
@@ -84,3 +311,11 @@ function getRandomNumCust(min, max) {
 //         console.log('this age from outside ' , this.age);
 //         console.log(student1.study());
 //         console.table(student1);
+// cookiesPerHour:[],
+// setCookiesPerHour: function(){
+//         for (var i=0; i<14 ;i++ )
+//         {
+//           this.cookiesPerHour[i]= Math.floor(this.cusPerHour[i] * this.avr);
+//         }
+//         console.log(this.cookiesPerHour);
+//     },
