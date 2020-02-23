@@ -12,19 +12,21 @@ var seattleShope = {
         for(var i=0 ; i<this.houer.length ;i++){
             this.numCus = getRandomNumCust(minimumCustomers , maximumCustomers);
            // console.log(NumCus);
-          
-            this.numCooke = this.numCus * this.averageCookies;
-            this.numCooke=Math.ceil(this.numCooke);
+           for (var j=0 ; j<14 ; j++){
+            this.numCooke[j] = this.numCus * this.averageCookies;
+            this.numCooke[j] =Math.ceil(this.numCooke[j]);
+            this.totalNumCooki = this.totalNumCooki + this.numCooke[j];
+            this.totalNumCooki=Math.ceil(this.totalNumCooki);
+           }
            
            
-           this.totalNumCooki = this.totalNumCooki + this.numCooke;
-           
-           this.totalNumCooki=Math.ceil(this.totalNumCooki);
-           console.table(`${this.houer[i]} we have ${this.numCus} customers we should have ${this.numCooke} in this houer `);
+           console.table(`${this.houer[i]} we have ${this.numCus} customers we should have ${this.numCooke[i]} in this houer `);
           
         }
         console.log(`total  ${this.totalNumCooki}`);
     },
+
+    
 
     render : function(){
         
@@ -35,25 +37,26 @@ var seattleShope = {
         console.log(hed1);
         var ul1 = document.createElement('ul');
         hed1.appendChild(ul1);
-        var li1 = document.createElement('li');
-        ul1.appendChild(li1);
-        var li2 = document.createElement('li');
-        ul1.appendChild(li2);
+        var tot = document.createElement('p');
+        container.appendChild(tot);
+
         for(var i=0 ; i<this.houer.length ;i++){
             var li1 = document.createElement('li');
+            li1.textContent = this.houer[i] +' : '+ this.numCooke[i] + ' cookies';
             ul1.appendChild(li1);
-            li1.textContent = this.houer[i] +' : '+ this.numCooke + ' cookies';
            
         }
-       
-
-    
-     
-} } ;
+            
+            tot.textContent = 'Total =' + this.totalNumCooki;
+} 
+ 
+} ;
 
 
  console.log(seattleShope.getNumCus(32 ,65));
+//  console.log(seattleShope.getcookenum());
  console.log(seattleShope.render());
+ 
 
 
 
@@ -94,16 +97,14 @@ var seattleShope = {
         console.log(hed1);
         var ul1 = document.createElement('ul');
         hed1.appendChild(ul1);
-        var li1 = document.createElement('li');
-        ul1.appendChild(li1);
-        var li2 = document.createElement('li');
-        ul1.appendChild(li2);
+       
+        var tot = document.createElement('p');
+        container.appendChild(tot);
         for(var i=0 ; i<this.houer.length ;i++){
-            var li1 = document.createElement('li');
-            ul1.appendChild(li1);
+            var li1 = document.createElement('li'); 
             li1.textContent = this.houer[i] +' : '+ this.numCooke + ' cookies';
-           
-        }
+            ul1.appendChild(li1);
+        } tot.textContent = 'Total =' + this.totalNumCooki;
        
 
     
@@ -150,17 +151,16 @@ var seattleShope = {
         hed1.textContent = this.shopeName;
         console.log(hed1);
         var ul1 = document.createElement('ul');
-        hed1.appendChild(ul1);
-        var li1 = document.createElement('li');
-        ul1.appendChild(li1);
-        var li2 = document.createElement('li');
-        ul1.appendChild(li2);
+        hed1.appendChild(ul1); 
+        var tot = document.createElement('p');
+        container.appendChild(tot);
         for(var i=0 ; i<this.houer.length ;i++){
             var li1 = document.createElement('li');
-            ul1.appendChild(li1);
-            li1.textContent = this.houer[i] +' : '+ this.numCooke + ' cookies';
            
-        }
+            li1.textContent = this.houer[i] +' : '+ this.numCooke + ' cookies';
+            ul1.appendChild(li1);
+           
+        } tot.textContent = 'Total =' + this.totalNumCooki;
        
 
     
@@ -206,16 +206,16 @@ var seattleShope = {
         console.log(hed1);
         var ul1 = document.createElement('ul');
         hed1.appendChild(ul1);
-        var li1 = document.createElement('li');
-        ul1.appendChild(li1);
-        var li2 = document.createElement('li');
-        ul1.appendChild(li2);
+       
+        var tot = document.createElement('p');
+        container.appendChild(tot);
         for(var i=0 ; i<this.houer.length ;i++){
             var li1 = document.createElement('li');
-            ul1.appendChild(li1);
+            
             li1.textContent = this.houer[i] +' : '+ this.numCooke + ' cookies';
+            ul1.appendChild(li1);
            
-        }
+        } tot.textContent = 'Total =' + this.totalNumCooki;
        
 
     
@@ -269,13 +269,15 @@ var seattleShope = {
         ul1.appendChild(li1);
         var li2 = document.createElement('li');
         ul1.appendChild(li2);
+        var tot = document.createElement('p');
+        container.appendChild(tot);
         for(var i=0 ; i<this.houer.length ;i++){
             var li1 = document.createElement('li');
             ul1.appendChild(li1);
             li1.textContent = this.houer[i] +' : '+ this.numCooke + ' cookies';
            
         }
-       
+        tot.textContent = 'Total =' + this.totalNumCooki;
 
     
      
@@ -319,3 +321,11 @@ function getRandomNumCust(min, max) {
 //         }
 //         console.log(this.cookiesPerHour);
 //     },
+
+// getcookenum :function(){
+    //     for (var j=0 ; j<14 ; j++){
+    //         this.numCooke[j] = this.getNumCus.numCus * this.averageCookies;
+    //         this.numCooke[j]=Math.ceil(this.numCooke);
+    //     }
+    //     console.table(`${this.houer[j]} we have ${this.numCus} customers we should have ${this.numCooke[j]} in this houer `);
+    // },
