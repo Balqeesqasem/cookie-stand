@@ -10,7 +10,7 @@ var seattleShope = {
     houer : ['6 AM' , '7 AM', '8 AM', '9 AM', '10 AM' , '11 AM' , '12 PM', '1 PM', '2 PM', '3 PM', '4 PM' , '5 PM' , '6 PM', '7 PM'],
     getNumCus : function( minimumCustomers , maximumCustomers){
         for(var i=0 ; i<this.houer.length ;i++){
-            this.numCus = getRandomNumCust(minimumCustomers , maximumCustomers);
+            this.numCus = getRandomNumCust(this.minimumCustomers , this.maximumCustomers);
            // console.log(NumCus);
           
             this.numCooke.push(Math.ceil(this.numCus * this.averageCookies));
@@ -52,7 +52,7 @@ var seattleShope = {
 } ;
 
 
- console.log(seattleShope.getNumCus(32 ,65));
+ console.log(seattleShope.getNumCus());
 //  console.log(seattleShope.getcookenum());
  console.log(seattleShope.render());
  
@@ -71,7 +71,7 @@ var seattleShope = {
     houer : ['6 AM' , '7 AM', '8 AM', '9 AM', '10 AM' , '11 AM' , '12 PM', '1 PM', '2 PM', '3 PM', '4 PM' , '5 PM' , '6 PM', '7 PM'],
     getNumCus : function( minimumCustomers , maximumCustomers){
         for(var i=0 ; i<this.houer.length ;i++){
-            this.numCus = getRandomNumCust(minimumCustomers , maximumCustomers);
+            this.numCus = getRandomNumCust(this.minimumCustomers , this.maximumCustomers);
            // console.log(NumCus);
           
             this.numCooke.push(Math.ceil(this.numCus * this.averageCookies));
@@ -108,7 +108,7 @@ var seattleShope = {
      
 } } ;
         
- console.log(tokyoShope.getNumCus(3 ,24));
+ console.log(tokyoShope.getNumCus());
  console.log(tokyoShope.render());
 
 
@@ -124,7 +124,7 @@ var seattleShope = {
     houer : ['6 AM' , '7 AM', '8 AM', '9 AM', '10 AM' , '11 AM' , '12 PM', '1 PM', '2 PM', '3 PM', '4 PM' , '5 PM' , '6 PM', '7 PM'],
     getNumCus : function( minimumCustomers , maximumCustomers){
         for(var i=0 ; i<this.houer.length ;i++){
-            this.numCus = getRandomNumCust(minimumCustomers , maximumCustomers);
+            this.numCus = getRandomNumCust(this.minimumCustomers , this.maximumCustomers);
            // console.log(NumCus);
           
            this.numCooke.push(Math.ceil(this.numCus * this.averageCookies));
@@ -163,7 +163,7 @@ var seattleShope = {
      
 } } ;
         
- console.log(dubaiShope.getNumCus(11 ,38));
+ console.log(dubaiShope.getNumCus());
  console.log(dubaiShope.render());
 
  var parisShope = {
@@ -177,7 +177,7 @@ var seattleShope = {
     houer : ['6 AM' , '7 AM', '8 AM', '9 AM', '10 AM' , '11 AM' , '12 PM', '1 PM', '2 PM', '3 PM', '4 PM' , '5 PM' , '6 PM', '7 PM'],
     getNumCus : function( minimumCustomers , maximumCustomers){
         for(var i=0 ; i<this.houer.length ;i++){
-            this.numCus = getRandomNumCust(minimumCustomers , maximumCustomers);
+            this.numCus = getRandomNumCust(this.minimumCustomers , this.maximumCustomers);
            // console.log(NumCus);
           
            this.numCooke.push(Math.ceil(this.numCus * this.averageCookies));
@@ -216,7 +216,7 @@ var seattleShope = {
      
 } } ;
         
- console.log(parisShope.getNumCus(20 ,38));
+ console.log(parisShope.getNumCus());
  console.log(parisShope.render());
 
 
@@ -234,7 +234,7 @@ var seattleShope = {
     houer : ['6 AM' , '7 AM', '8 AM', '9 AM', '10 AM' , '11 AM' , '12 PM', '1 PM', '2 PM', '3 PM', '4 PM' , '5 PM' , '6 PM', '7 PM'],
     getNumCus : function( minimumCustomers , maximumCustomers){
         for(var i=0 ; i<this.houer.length ;i++){
-            this.numCus = getRandomNumCust(minimumCustomers , maximumCustomers);
+            this.numCus = getRandomNumCust(this.minimumCustomers , this.maximumCustomers);
            // console.log(NumCus);
           
            this.numCooke.push(Math.ceil(this.numCus * this.averageCookies));
@@ -276,7 +276,7 @@ var seattleShope = {
      
 } } ;
         
- console.log(limaShope.getNumCus(2 ,16));
+ console.log(limaShope.getNumCus());
  console.log(limaShope.render());
 
 
