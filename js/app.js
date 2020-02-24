@@ -12,19 +12,18 @@ var seattleShope = {
         for(var i=0 ; i<this.houer.length ;i++){
             this.numCus = getRandomNumCust(minimumCustomers , maximumCustomers);
            // console.log(NumCus);
-           for (var j=0 ; j<14 ; j++){
-            this.numCooke[j] = this.numCus * this.averageCookies;
-            this.numCooke[j] =Math.ceil(this.numCooke[j]);
-            this.totalNumCooki = this.totalNumCooki + this.numCooke[j];
-            this.totalNumCooki=Math.ceil(this.totalNumCooki);
-           }
+          
+            this.numCooke.push(Math.ceil(this.numCus * this.averageCookies));
+            // this.numCooke=Math.ceil(this.numCooke);
+           this.totalNumCooki = this.totalNumCooki + this.numCooke[i];
            
-           
+           this.totalNumCooki=Math.ceil(this.totalNumCooki);
            console.table(`${this.houer[i]} we have ${this.numCus} customers we should have ${this.numCooke[i]} in this houer `);
           
         }
         console.log(`total  ${this.totalNumCooki}`);
     },
+
 
     
 
@@ -75,14 +74,12 @@ var seattleShope = {
             this.numCus = getRandomNumCust(minimumCustomers , maximumCustomers);
            // console.log(NumCus);
           
-            this.numCooke = this.numCus * this.averageCookies;
-            this.numCooke=Math.ceil(this.numCooke);
-           
-           
-           this.totalNumCooki = this.totalNumCooki + this.numCooke;
+            this.numCooke.push(Math.ceil(this.numCus * this.averageCookies));
+            // this.numCooke=Math.ceil(this.numCooke);
+           this.totalNumCooki = this.totalNumCooki + this.numCooke[i];
            
            this.totalNumCooki=Math.ceil(this.totalNumCooki);
-           console.table(`${this.houer[i]} we have ${this.numCus} customers we should have ${this.numCooke} in this houer `);
+           console.table(`${this.houer[i]} we have ${this.numCus} customers we should have ${this.numCooke[i]} in this houer `);
           
         }
         console.log(`total  ${this.totalNumCooki}`);
@@ -102,7 +99,7 @@ var seattleShope = {
         container.appendChild(tot);
         for(var i=0 ; i<this.houer.length ;i++){
             var li1 = document.createElement('li'); 
-            li1.textContent = this.houer[i] +' : '+ this.numCooke + ' cookies';
+            li1.textContent = this.houer[i] +' : '+ this.numCooke[i] + ' cookies';
             ul1.appendChild(li1);
         } tot.textContent = 'Total =' + this.totalNumCooki;
        
