@@ -11,6 +11,7 @@ this.totalNumCooki =0;
 this.numCooke= [];
 
 
+
 }
 Shope.prototype.getNumCus = function (minimumCustomers,maximumCustomers){
     for(var i=0;i<houer.length;i++) 
@@ -154,7 +155,38 @@ var tr6 = document.createElement('tr');
 table.appendChild(tr6);
 tr6.textContent='Total'  ;
 
-console.log(td1.textContent+td3.textContent);
+
+var totalPerHouert = [];
+var totalPerHouer = 0;
+for( var i=0 ; i<houer.length ; i++){
+
+    totalPerHouer =  Seattle.numCooke[i] + Tokyo.numCooke[i] + Dubai.numCooke[i] + Paris.numCooke[i] + Lima.numCooke[i];
+    totalPerHouert.push(totalPerHouer);
+    console.log()
+    var td11=document.createElement('td');
+    td11.textContent=totalPerHouert[i];
+    tr6.appendChild(td11);
+
+}
+
+var totalOfTotal = Seattle.totalNumCooki + Tokyo.totalNumCooki + Dubai.totalNumCooki + Paris.totalNumCooki + Lima.totalNumCooki;
+var td12=document.createElement('td');
+    td12.textContent=totalOfTotal;
+    tr6.appendChild(td12);
+
+
+
+// var shope = []
+// for( var i=0 ; i<houer.length ; i++){
+//     var totalOfTotal =0;
+//     var colomSum =0 ;
+//     for(var j=0 ; j<shope.length;j++){
+//         colomSum=colomSum+Shope[j].numCooke[i];
+//         totalOfTotal =totalOfTotal + colomSum;
+//     }
+// }
+// console(totalOfTotal)
+
 
 // for( var i=0 ; i<houer.length ; i++){
 //     var td11 = document.createElement('td');
