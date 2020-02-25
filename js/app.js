@@ -91,6 +91,7 @@ var th2 =document.createElement('th');
 var tr1 = document.createElement('tr');
 table.appendChild(tr1);
 tr1.textContent=Seattle.shopeName  ;
+
 for ( var i=0 ; i<houer.length ;i++){
 var td1 = document.createElement('td');
 td1.textContent=Seattle.numCooke[i];
@@ -174,26 +175,3 @@ var td12=document.createElement('td');
     td12.textContent=totalOfTotal;
     tr6.appendChild(td12);
 
-
-
-// var shope = []
-// for( var i=0 ; i<houer.length ; i++){
-//     var totalOfTotal =0;
-//     var colomSum =0 ;
-//     for(var j=0 ; j<shope.length;j++){
-//         colomSum=colomSum+Shope[j].numCooke[i];
-//         totalOfTotal =totalOfTotal + colomSum;
-//     }
-// }
-// console(totalOfTotal)
-
-
-// for( var i=0 ; i<houer.length ; i++){
-//     var td11 = document.createElement('td');
-//     td11.textContent= td1+td2+td3;
-//     tr6.appendChild(td11);
-// }
-
-// var td11 = document.createElement('td');
-// td11.textContent=Seattle.numCooke +Tokyo.numCooke;
-// tr6.appendChild(td11);
