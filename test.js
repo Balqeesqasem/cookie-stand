@@ -10,6 +10,13 @@ function getRandomNumCust(min, max) {
     return (Math.floor(Math.random() * (max - min)) + min); //The maximum is exclusive and the minimum is inclusive
   }
 
+
+// creat table 
+
+var container = document.getElementById('show');
+var table = document.createElement('table');
+container.appendChild(table);
+
 // constructer function 
 
 function Shope(shopeName ,minimumCustomers ,maximumCustomers ,averageCookies){
@@ -28,6 +35,7 @@ function Shope(shopeName ,minimumCustomers ,maximumCustomers ,averageCookies){
     
     }
 
+    
     
 // method
     Shope.prototype.getNumCus = function (){
@@ -62,19 +70,13 @@ function Shope(shopeName ,minimumCustomers ,maximumCustomers ,averageCookies){
         tdTotal.textContent =  this.totalNumCooki;
     };
 
-//obj
+
  new Shope('Seattle',32, 65, 6.3);
  new Shope('Tokyo',3 , 24,1.2);
  new Shope('Dubai' , 11,38,3.7 );
  new Shope('Paris',20 ,38, 2.3 );
  new Shope ('Lima' , 2, 16 , 4.6);
 
-
- // creat table 
-
-var container = document.getElementById('show');
-var table = document.createElement('table');
-container.appendChild(table);
 
 function renderTableHeader(){
 
@@ -133,7 +135,7 @@ function renderTableFooter(){
 renderTableHeader();
 
 
-//to call render function each time we have obj 
+
 for(var i = 0 ; i < shopeLocation.length ; i++){
     shopeLocation[i].render();
   }

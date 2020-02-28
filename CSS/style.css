@@ -1,64 +1,42 @@
+
+
 body{
-  background-image: url(https://i.pinimg.com/originals/ef/72/2d/ef722d6410685ee607533a93b5aeadec.jpg);
+  /* background-image: url(https://i.pinimg.com/originals/ef/72/2d/ef722d6410685ee607533a93b5aeadec.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 
 }
 
+div#hed {
+ 
+  background-color: cadetblue;
+  margin: 7%;
+}
 h1 {
-    background-color: rgb(215, 239, 240);
-    color:rgb(14, 12, 12);
+    
+  color: powderblue;
     text-align: center;
     padding: 3%;
     margin: 3%;
     font-size: 300%;
     font-style: italic;
+   
 }
 
 
 h2 {
   background-color: cadetblue;
-  text-align: left;
-  margin-left: 2%;
-  font-size: 200%;
   font-style: italic;
-  width: 20%;
-  padding: 3%;
-  margin: 3%;
-
+    width: 12%;
+    padding: 1%;
+    margin: 7%;
+    font-weight: bold;
+    color: azure;
   
 
 }
 
-h3 {
-  background-color: cadetblue;
-  text-align: left;
-  margin-left: 2%;
-  font-size: 200%;
-  font-style: italic;
- 
-  padding: 3%;
-  margin: 3%;
-  margin-top: 15%;
-  width: 20%;
- 
-
-}
-h4 {
-  background-color: cadetblue;
-  text-align: left;
-  margin-left: 2%;
-  font-size: 200%;
-  font-style: italic;
- 
-  padding: 3%;
-  margin: 3%;
-  margin-top: 15%;
-  width: 20%;
- 
-
-}
 
 li {
     color: black;
@@ -87,23 +65,26 @@ th, td {
   }
 
   button{
-    padding: 3%;
-    margin: 3%;
+    padding: 1%;
+   
     text-align: center;
-    background-color: rgb(215, 239, 240);
+   
+    background-color: cadetblue;
     font-style: italic;
-    margin-left: 40%;
+      width: 12%;
+      padding: 1%;
+      margin: 7%;
+      font-weight: bold;
+      color: azure;
     
   }
 
   #logo {
   
-  width: 35%;
-  height: 35%;
- float: left;
-  padding: 3%;
-  
-
+    width: 10%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 2.5%
 
   
   }
@@ -121,12 +102,52 @@ th, td {
   }
 
   .info {
-    background-color: rgb(248, 243, 200);
     font-size: 300%;
     font-style: italic;
     height: 10%;
-    width: 70%;
-    margin-right: 40%;
-    margin-top: 5%;
-    margin: 3%;
-  }
+    width: 88%;
+    color: coral;
+    margin: 7%;
+}
+
+#store {
+  width: 75%;
+  margin: 10%;
+  
+}
+
+#maps{
+  text-align: center;
+ 
+  border: 1px solid transparent;
+
+  margin: 7%;
+  width: 87%;
+}
+
+#shopname {
+  color: slategray;
+  font-size: large;
+  font-weight: bold;
+  font-family: monospace;
+}
+#contact {
+
+  width: 9%;
+  margin-left: 13%
+}
+
+#link {
+  margin-left: 13%;
+  margin-top: 2%;
+  line-height: 205%;
+  color: tomato;
+}
+
+#footer{
+
+  text-align: center;
+    padding: 1%;
+    margin: 7%;
+    background-color: tan;
+}
