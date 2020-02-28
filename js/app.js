@@ -131,11 +131,12 @@ function renderTableFooter(){
 
 }
 
+
 // submit form
 
 var form = document.getElementById('form');
 form.addEventListener('submit', function (addShope) {
-
+table.removeChild(table.lastChild);
     addShope.preventDefault();
     //console.log(event.target.lowestValue.value);
 
@@ -147,7 +148,7 @@ form.addEventListener('submit', function (addShope) {
     
      newLocation.render();
     
-    
+     renderTableFooter();
      
     
     
@@ -166,4 +167,4 @@ for(var i = 0 ; i < shopeLocation.length ; i++){
   
   
 
-  renderTableFooter();
+  
