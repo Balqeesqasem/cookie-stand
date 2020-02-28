@@ -151,3 +151,25 @@ th, td {
     margin: 7%;
     background-color: tan;
 }
+
+
+legend {
+  
+  
+  color: teal;
+  font-size: x-large;
+}
+fieldset {
+  margin: 7%;
+  line-height: 231%;
+}
+
+label {
+  color: cadetblue;
+  font-size: large;
+  font-style: oblique;
+}
+input {
+  border: inset;
+  color: teal;
+}

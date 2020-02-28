@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cookie-stand</title>
     <link rel="stylesheet" href="CSS/reset.css">
   <link rel="stylesheet" href="CSS/style.css">
 </head>
@@ -18,6 +18,25 @@
    
 
 <main>
+
+  <!-- <form action="/action_page.php"> -->
+    <form  id="form" >
+    <fieldset>
+      <legend>Suggest us our new location:</legend>
+      <label for="shopeName">Shope Name:</label>
+      <input type="text" id="shopeName" name="shopeName" required><br><br>
+
+      <label for="minimumCustomers">minimumCustomers :</label>
+      <input type="number" id="minimumCustomers" name="minimumCustomers" required><br><br>
+
+      <label for="maximumCustomers">maximumCustomers:</label>
+      <input type="number" id="maximumCustomers" name="maximumCustomers" required><br><br>
+
+      <label for="averageCookies">averageCookies:</label>
+      <input type="number" id="averageCookies" name="averageCookies"required><br><br>
+      <input type="submit"  value="submit" >
+    </fieldset>
+  </form>
   <div id = "show"></div>
   <a href="index.html"><button>Home</button> </a>
 </main>

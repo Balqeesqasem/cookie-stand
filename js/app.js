@@ -10,6 +10,7 @@ function getRandomNumCust(min, max) {
     return (Math.floor(Math.random() * (max - min)) + min); //The maximum is exclusive and the minimum is inclusive
   }
 
+
 // constructer function 
 
 function Shope(shopeName ,minimumCustomers ,maximumCustomers ,averageCookies){
@@ -47,6 +48,7 @@ function Shope(shopeName ,minimumCustomers ,maximumCustomers ,averageCookies){
     };
 
     Shope.prototype.render = function () {
+        
         var tr = document.createElement('tr');
         table.appendChild(tr);
         var td = document.createElement('td');
@@ -60,6 +62,7 @@ function Shope(shopeName ,minimumCustomers ,maximumCustomers ,averageCookies){
         var tdTotal = document.createElement('td');
         tr.appendChild(tdTotal);
         tdTotal.textContent =  this.totalNumCooki;
+       
     };
 
 //obj
@@ -100,11 +103,11 @@ function renderTableHeader(){
 
 function renderTableFooter(){
 
-    var tr =document.createElement('tr');
-        table.appendChild(tr);
-        var td = document.createElement('td');
-        tr.appendChild(td);
-        td.textContent = 'Total';
+    var trFooter =document.createElement('tr');
+        table.appendChild(trFooter);
+        var tdFooter = document.createElement('td');
+        trFooter.appendChild(tdFooter);
+        tdFooter.textContent = 'Total';
         var totalPerHouer ;
         var totalOfTotal =0;
         
@@ -116,18 +119,39 @@ function renderTableFooter(){
       
       }
       totalOfTotal = totalOfTotal +totalPerHouer;
-      var td = document.createElement('td');
-      tr.appendChild(td);
-      td.textContent=totalPerHouer;
-      
+      var tdFooter = document.createElement('td');
+      trFooter.appendChild(tdFooter);
+      tdFooter.textContent=totalPerHouer;
      
      }
       
       var tdTotalOfTotal = document.createElement('td');
-      tr.appendChild(tdTotalOfTotal);
+      trFooter.appendChild(tdTotalOfTotal);
       tdTotalOfTotal.textContent= totalOfTotal;
 
 }
+
+// submit form
+
+var form = document.getElementById('form');
+form.addEventListener('submit', function (addShope) {
+
+    addShope.preventDefault();
+    //console.log(event.target.lowestValue.value);
+
+    var shopeName = addShope.target.shopeName.value;
+    var minimumCustomers = addShope.target.minimumCustomers.value;
+    var maximumCustomers = addShope.target.maximumCustomers.value;
+    var averageCookies = addShope.target.averageCookies.value;
+    var newLocation = new Shope(shopeName ,minimumCustomers ,maximumCustomers ,averageCookies);
+    
+     newLocation.render();
+    
+    
+     
+    
+    
+} )
 
 
 renderTableHeader();
@@ -136,6 +160,10 @@ renderTableHeader();
 //to call render function each time we have obj 
 for(var i = 0 ; i < shopeLocation.length ; i++){
     shopeLocation[i].render();
+    
   }
+
+  
+  
 
   renderTableFooter();
